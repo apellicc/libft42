@@ -9,10 +9,11 @@ char	*ft_strnew(size_t	size)
 	s = (char *) malloc(sizeof (char *) * size);
 	if (!s)
 		return(NULL);
-	while (i <= size)
+	while (size)
 	{
 		s[i] = '\0';
-		i++; 
+		i++;
+		size--;
 	}
 	return (s);
 }

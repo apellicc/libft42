@@ -11,10 +11,10 @@ char *ft_strsub(char const *s, unsigned int start, size_t len)
 		return(NULL);
 	while (start <= len)
 	{
-		t[i] = s[start];
+		s2[i] = s[start];
 		start++;
 		i++;
 	}
-	t[start] = '\0';
-	return (t);
+	s2[start] = '\0';
+	return (s2);
 }

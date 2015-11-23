@@ -30,7 +30,7 @@ char		*ft_strtrim(char const *s)
 
 	b = 0;
 	i = ft_searchwhitespace(s);
-	a = ft_searchrrwhitespace(s);
+	a = ft_searchrwhitespace(s);
 	c = (char *) malloc(sizeof (char *) * ((a - i) + 1));
 	while (i <= a)
 	{

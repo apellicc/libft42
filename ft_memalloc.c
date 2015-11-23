@@ -3,16 +3,10 @@
 void	*ft_memalloc(size_t size)
 {
 	void	*s;
-	int		i;
-	i = 0;
 
-	s = (void *)malloc(sizeof(void *) * size);
+	s = (void *)malloc(size);
 	if (!s)
 		return (NULL);
-	while (i <= size)
-	{
-		s[i] = 0;
-		i++;
-	}
+	ft_bzero(s, size);
 	return (s);
 }
