@@ -16,6 +16,7 @@ int ft_atoi(const char *str)
 	{
 		i = i * 10;
 		i = i + (str[a] - 48);
+		a++;
 	}
 	return(a * i);
 }

@@ -22,7 +22,7 @@ ft_strncat.c ft_toupper.c ft_tolower.c ft_putnbr.c ft_memchr.c\
 ft_putchar_fd.c ft_putnbr_fd.c ft_putendl_fd.c ft_putstr_fd.c\
 ft_striter.c ft_striteri.c ft_strlcat.c ft_strmap.c ft_strmapi.c\
 ft_strsplit.c ft_itoa.c ft_memccpy.c ft_memmove.c ft_atoi.c ft_memcpy.c\
-ft_memcmp.c ft_splitstr.c
+ft_memcmp.c ft_strsplit.c ft_strtrim_c.c
 OBJ = $(SRC:.c=.o)
 
 FLAG = -Wall -Werror -Wextra
