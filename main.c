@@ -1,10 +1,18 @@
 #include "libft.h"
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	char **tabstr = ft_splitstr(argv[1], argv[2][0]);
-	int i = 0;
-	while (tabstr[i])
-		printf("%s\n", tabstr[i++]);
-	return (0);
+   int i;
+   char **split;
+
+   if (argc == 2)
+       split = ft_splitstr(argv[1], ' ');
+   i = 0;
+   while (split[i])
+   {
+       ft_putstr(split[i]);
+    ft_putchar('\n');
+       i++;
+   }
+   return (0);
 }
