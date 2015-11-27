@@ -9,6 +9,8 @@ char *ft_strjoin(char const *s1, char const *s2)
 	a = 0;
 	b = 0;
 	s3 = (char *)malloc (sizeof (char *) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!s3)
+		return (NULL);
 	while (s1[a] != '\0')
 	{
 		s3[a] = s1[a];

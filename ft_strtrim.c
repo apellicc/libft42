@@ -31,7 +31,9 @@ char		*ft_strtrim(char const *s)
 	b = 0;
 	i = ft_searchwhitespace(s);
 	a = ft_searchrwhitespace(s);
-	c = (char *) malloc(sizeof (char *) * ((a - i) + 1));
+	c = ft_strnew((a - i) + 1);
+	if(!c)
+		return(NULL);
 	while (i <= a)
 	{
 		c[b] = s[i];

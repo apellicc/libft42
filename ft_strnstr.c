@@ -2,9 +2,9 @@
 
 char *ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	int i;
-	int f;
-	int k;
+	size_t i;
+	size_t f;
+	size_t k;
 
 	i = 0;
 	f = 0;
@@ -15,7 +15,7 @@ char *ft_strnstr(const char *s1, const char *s2, size_t len)
 		k = i; 
 		while (s1[k] == s2[f])
 		{
-			if ((unsigned int)f == len || s2[f] == '\0')
+			if (f == len && s2[f] == '\0')
 				return ((char *)s1 + i);
 			k++;
 			f++;

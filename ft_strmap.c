@@ -7,6 +7,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	i = 0;
 	s1 = ft_strdup(s);
+	if (!s1)
+		return(NULL);
 	if (s != NULL && f != NULL)
 	{
 		while(s[i])

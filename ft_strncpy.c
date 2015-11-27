@@ -11,10 +11,11 @@ char *ft_strncpy(char *dst, const char *src, size_t len)
 		i++;
 		len--;
 	}
-	while(dst[i] != '\0')
+	while(len)
 	{
 		dst[i] = '\0';
 		i++;
+		len--;
 	}
 	return(dst);
 }

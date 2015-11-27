@@ -9,7 +9,7 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	i = 0;
 	d = ft_strlen(s1);
 
-	while (s2[i] != '\0' || i == n)
+	while (s2[i] != '\0' && i != n)
 	{
 		s1[d] = s2[i];
 		i++;
