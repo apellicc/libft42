@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/28 14:20:05 by apellicc          #+#    #+#             */
+/*   Updated: 2015/11/28 14:20:07 by apellicc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strrchr(char const *s, int c)
+char	*ft_strrchr(char const *s, int c)
 {
-	int i;
+	int	i;
 
 	i = ft_strlen(s);
 	if (c == '\0')
@@ -13,6 +25,5 @@ char *ft_strrchr(char const *s, int c)
 			return ((char *)s + i);
 		i--;
 	}
-	
 	return (NULL);
 }
