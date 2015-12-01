@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 23:39:33 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/01 23:39:37 by apellicc         ###   ########.fr       */
+/*   Created: 2015/12/01 23:33:04 by apellicc          #+#    #+#             */
+/*   Updated: 2015/12/01 23:33:06 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void 	ft_strdel(char **as)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	free(*as);
-	*as = NULL;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

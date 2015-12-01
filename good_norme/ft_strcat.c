@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 23:39:33 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/01 23:39:37 by apellicc         ###   ########.fr       */
+/*   Created: 2015/12/01 23:35:04 by apellicc          #+#    #+#             */
+/*   Updated: 2015/12/01 23:35:22 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void 	ft_strdel(char **as)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	free(*as);
-	*as = NULL;
+	int	i;
+	int	d;
+
+	i = 0;
+	d = ft_strlen(s1);
+	while (s2[i] != '\0')
+	{
+		s1[d] = s2[i];
+		i++;
+		d++;
+	}
+	s1[d] = '\0';
+	return (s1);
 }

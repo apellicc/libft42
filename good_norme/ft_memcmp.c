@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 23:39:33 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/01 23:39:37 by apellicc         ###   ########.fr       */
+/*   Created: 2015/12/01 23:25:18 by apellicc          #+#    #+#             */
+/*   Updated: 2015/12/01 23:25:56 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void 	ft_strdel(char **as)
+int			ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	free(*as);
-	*as = NULL;
+	char	*str1;
+	char	*str2;
+
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	if (!s1 || !s2)
+		return (0);
+	while (n--)
+	{
+		if (*str1 != *str2)
+			return ((unsigned char)*str1 - (unsigned char)*str2);
+		str1++;
+		str2++;
+	}
+	return (0);
 }

@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 23:39:33 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/01 23:39:37 by apellicc         ###   ########.fr       */
+/*   Created: 2015/12/01 22:08:18 by apellicc          #+#    #+#             */
+/*   Updated: 2015/12/01 22:08:45 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void 	ft_strdel(char **as)
+int		ft_isalnum(int c)
 {
-	free(*as);
-	*as = NULL;
+	if ((ft_isdigit(c) || ft_isalpha(c)) == 1)
+		return (1);
+	return (0);
 }

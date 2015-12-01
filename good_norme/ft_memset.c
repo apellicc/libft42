@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 23:39:33 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/01 23:39:37 by apellicc         ###   ########.fr       */
+/*   Created: 2015/12/01 23:28:00 by apellicc          #+#    #+#             */
+/*   Updated: 2015/12/01 23:29:49 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void 	ft_strdel(char **as)
+void				*ft_memset(void *b, int c, size_t len)
 {
-	free(*as);
-	*as = NULL;
+	unsigned char	*s;
+	int				i;
+
+	i = 0;
+	s = b;
+	while (len)
+	{
+		s[i] = c;
+		i++;
+		len--;
+	}
+	return (b);
 }

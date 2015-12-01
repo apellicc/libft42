@@ -1,19 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 23:39:33 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/01 23:39:37 by apellicc         ###   ########.fr       */
+/*   Created: 2015/12/01 22:03:50 by apellicc          #+#    #+#             */
+/*   Updated: 2015/12/01 22:04:28 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void 	ft_strdel(char **as)
+int		ft_atoi(const char *str)
 {
-	free(*as);
-	*as = NULL;
+	int	i;
+	int	a;
+	int	b;
+
+	a = 0;
+	i = 1;
+	b = 0;
+	while (str[a] == ' ' || str[a] == '\n' || str[a] == '\v' ||
+		str[a] == '\t' || str[a] == '\r' || str[a] == '\f')
+		a++;
+	if (str[a] == '-')
+	{
+		i = -1;
+		a++;
+	}
+	else if (str[a] == '+')
+		a++;
+	while ('0' <= str[a] && str[a] <= '9')
+	{
+		b = b * 10;
+		b = b + (str[a] - '0');
+		a++;
+	}
+	return (b * i);
 }
