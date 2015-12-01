@@ -4,10 +4,9 @@ int main(int argc, char **argv)
 {
    int i;
    char *trim;
-
+   printf("lelele\n"); 
    trim = (char *)malloc(sizeof(char) + 10);
-   if (argc == 1)
-       trim = ft_strtrim(argv[1]);
+        trim = ft_strtrim("\t\t\n\t\t   ");
    printf("%s\n", trim);
    return (0);
 }

@@ -4,12 +4,9 @@ static int	ft_searchrwhitespace(char const *s)
 {
 	int		i;
 
-	i = ft_strlen(s);
-	while (s[i] ==' ' || s[i] == '\n'|| s[i] == '\t')
-		{
+	i = ft_strlen(s) - 1;
+	while ((s[i] ==' ' || s[i] == '\n'|| s[i] == '\t') && i)
 			i--;
-			printf("%d", i);
-		}
 	return(i);
 }
 
@@ -19,11 +16,8 @@ static int	ft_searchwhitespace(char const *s)
 	int		i;
 
 	i = 0;
-	while (s[i] ==' ' || s[i] == '\n'|| s[i] == '\t')
-		{
+	while ((s[i] ==' ' || s[i] == '\n'|| s[i] == '\t') && s[i] != '\0')
 			i++;
-			printf("%d", i);
-		}
 	return(i);
 }
 
@@ -35,10 +29,13 @@ char	*ft_strtrim(char const *s)
 	int i;
 
 	i = 0;
+	
 	if(!s)
 		return (NULL);
 	len =  ft_searchwhitespace(s);
 	rlen = ft_searchrwhitespace(s);
+	if (rlen == 0)
+		return ((char *)&s[len]);
 	s1 = (char *)malloc(sizeof(char) * (rlen - len + 1));
 	if (!s1)
 		return (NULL);

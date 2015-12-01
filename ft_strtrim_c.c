@@ -21,23 +21,30 @@ static int	ft_searchc(char const *s, char c)
 	return(i);
 }
 
-char		*ft_strtrim_c(char const *s, char c)
+char	*ft_strtrim_c(char const *s, char c)
 {
-	char	*s1;
-	int		i;
-	int		a;
-	int		b;
+	char *s1;
+	int len;
+	int rlen;
+	int i;
 
-	b = 0;
-	i = ft_searchc(s, c);
-	a = ft_searchrc(s, c);
-	s1 = ft_strnew((a - i) + 1);
-	while (i <= a)
+	i = 0;
+	
+	if(!s)
+		return (NULL);
+	len =  ft_searchc(s, c);
+	rlen = ft_searchrc(s, c);
+	if (rlen == 0)
+		return ((char *)&s[len]);
+	s1 = (char *)malloc(sizeof(char) * (rlen - len + 1));
+	if (!s1)
+		return (NULL);
+	while (rlen >= len)
 	{
-		s1[b] = s[i];
-		b++;
+		s1[i] = s[len];
+		len++;
 		i++;
 	}
-	s1[b] = '\0';
-	return(s1);
+	s1[i] = '\0';
+	return (s1);
 }
