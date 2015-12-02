@@ -1,15 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/12/01 22:03:50 by apellicc          #+#    #+#             */
+/*   Updated: 2015/12/01 22:04:28 by apellicc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
-	int i;
-	int a;
-	int b;
+	int	i;
+	int	a;
+	int	b;
 
 	a = 0;
 	i = 1;
 	b = 0;
-	while (str[a] == ' ' || str[a] == '\n' || str[a] == '\v' || str[a] == '\t' || str[a] == '\r' || str[a] == '\f')
+	while (str[a] == ' ' || str[a] == '\n' || str[a] == '\v' ||
+		str[a] == '\t' || str[a] == '\r' || str[a] == '\f')
 		a++;
 	if (str[a] == '-')
 	{
@@ -18,7 +31,7 @@ int ft_atoi(const char *str)
 	}
 	else if (str[a] == '+')
 		a++;
-	while ('0'<= str[a] && str[a] <= '9')
+	while ('0' <= str[a] && str[a] <= '9')
 	{
 		b = b * 10;
 		b = b + (str[a] - '0');

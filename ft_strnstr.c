@@ -1,11 +1,9 @@
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
-
+char		*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-
 	size_t	i;
-	size_t f;
+	size_t	f;
 
 	i = 0;
 	if (!*s2)

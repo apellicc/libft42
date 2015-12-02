@@ -3,9 +3,9 @@
 char	*ft_strstr(const char *s1, const char *s2)
 {
 	int	i;
-	int f;
+	int	f;
 	int k;
-
+	
 	i = 0;
 	f = 0;
 	if (s2[f] == '\0')

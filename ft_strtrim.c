@@ -1,35 +1,13 @@
 #include "libft.h"
 
-static int	ft_searchrwhitespace(char const *s)
+char		*ft_strtrim(char const *s)
 {
-	int		i;
-
-	i = ft_strlen(s) - 1;
-	while ((s[i] ==' ' || s[i] == '\n'|| s[i] == '\t') && i)
-			i--;
-	return(i);
-}
-
-
-static int	ft_searchwhitespace(char const *s)
-{
+	char	*s1;
+	int		len;
+	int		rlen;
 	int		i;
 
 	i = 0;
-	while ((s[i] ==' ' || s[i] == '\n'|| s[i] == '\t') && s[i] != '\0')
-			i++;
-	return(i);
-}
-
-char	*ft_strtrim(char const *s)
-{
-	char *s1;
-	int len;
-	int rlen;
-	int i;
-
-	i = 0;
-	
 	if(!s)
 		return (NULL);
 	len =  ft_searchwhitespace(s);

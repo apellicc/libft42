@@ -30,7 +30,15 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strtrim_c(char const *s, char c);
-
+char	*ft_intcpy(int n, int t, int i);
+int		ft_intlen(int n);
+int		ft_searchc(char const *s, char c);
+int		ft_searchrc(char const *s, char c);
+int		ft_searchrwhitespace(char const *s);
+int		ft_searchwhitespace(char const *s);
+char	*ft_strtrim_c(char const *s, char c);
+int		ft_nbword(char const *s, char c);
+int		ft_lenword(const char *s, char c, int i);
 
 
 void	*ft_memset(void *b, int c, size_t len);
