@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_puttab.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 23:27:26 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/16 16:00:35 by apellicc         ###   ########.fr       */
+/*   Created: 2015/12/16 16:20:40 by apellicc          #+#    #+#             */
+/*   Updated: 2015/12/16 16:32:49 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_puttab(char **str)
 {
-	char		*dst1;
-	const char	*src1;
+	int	i;
 
-	dst1 = dst;
-	src1 = src;
-	if (src1 < dst1)
+	i = 0;
+	while (str[i] != NULL)
 	{
-		while (len--)
-			*(dst1 + len) = *(src1 + len);
+		write(1, str[i], ft_strlen(str[i]));
+		write(1, "\n", 1);
+		i++;
 	}
-	else
-		ft_memcpy(dst1, src, len);
-	return (dst);
 }

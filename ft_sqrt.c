@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 23:27:26 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/16 16:00:35 by apellicc         ###   ########.fr       */
+/*   Created: 2015/12/16 16:17:56 by apellicc          #+#    #+#             */
+/*   Updated: 2015/12/16 16:33:09 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_sqrt(int nb)
 {
-	char		*dst1;
-	const char	*src1;
+	int	i;
 
-	dst1 = dst;
-	src1 = src;
-	if (src1 < dst1)
-	{
-		while (len--)
-			*(dst1 + len) = *(src1 + len);
-	}
-	else
-		ft_memcpy(dst1, src, len);
-	return (dst);
+	i = 0;
+	while (i * i < nb)
+		i++;
+	return (i);
 }

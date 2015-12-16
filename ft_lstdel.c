@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 23:27:26 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/16 16:00:35 by apellicc         ###   ########.fr       */
+/*   Created: 2015/12/16 15:57:28 by apellicc          #+#    #+#             */
+/*   Updated: 2015/12/16 15:57:34 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	char		*dst1;
-	const char	*src1;
+	t_list	**list_ptr;
+	t_list	*lst;
 
-	dst1 = dst;
-	src1 = src;
-	if (src1 < dst1)
+	list_ptr = alst;
+	if (!alst || !del)
+		return ;
+	while (*alst && del)
 	{
-		while (len--)
-			*(dst1 + len) = *(src1 + len);
+		lst = *alst;
+		*alst = (*alst)->next;
+		(*del)(lst->content, lst->content_size);
+		free(lst);
+		lst = NULL;
 	}
-	else
-		ft_memcpy(dst1, src, len);
-	return (dst);
+	(void)list_ptr;
+	list_ptr = NULL;
 }

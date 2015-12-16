@@ -6,9 +6,10 @@
 /*   By: apellicc <apellicc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 16:06:31 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/16 12:47:12 by apellicc         ###   ########.fr       */
+/*   Updated: 2015/12/16 15:59:28 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static int		ft_itoa_size(int n)
