@@ -6,7 +6,7 @@
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 23:25:18 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/01 23:25:56 by apellicc         ###   ########.fr       */
+/*   Updated: 2015/12/16 13:36:27 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	str1 = (char *)s1;
 	str2 = (char *)s2;
-	if (!s1 || !s2)
-		return (0);
 	while (n--)
 	{
 		if (*str1 != *str2)

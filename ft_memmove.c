@@ -6,18 +6,23 @@
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 23:27:26 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/01 23:27:47 by apellicc         ###   ########.fr       */
+/*   Updated: 2015/12/16 13:40:59 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void		*ft_memmove(void *dst, const void *src, size_t len)
-{
-	void	*tmp;
+{	
+	char	a;
+	void	*b;
 
-	tmp = ft_memalloc(len);
-	tmp = ft_memcpy(tmp, src, len);
-	dst = ft_memcpy(dst, tmp, len);
-	return (dst);
+	if (len)
+	{
+		a = *(char *)src;
+		b = ft_memmove(dst + 1, src + 1, len - 1);
+		*(char *)dst = a;
+	}
+	b = dst;
+	return (b);
 }

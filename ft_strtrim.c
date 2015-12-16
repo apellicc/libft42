@@ -6,7 +6,7 @@
 /*   By: apellicc <apellicc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 16:32:12 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/02 16:37:55 by apellicc         ###   ########.fr       */
+/*   Updated: 2015/12/16 13:18:41 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char		*ft_strtrim(char const *s)
 	rlen = ft_searchrwhitespace(s);
 	if (rlen == 0)
 		return ((char *)&s[len]);
-	s1 = (char *)malloc(sizeof(char) * (rlen - len + 1));
+	s1 = (char *)malloc(sizeof(char) * (rlen - len) + 1);
 	if (!s1)
 		return (NULL);
 	while (rlen >= len)

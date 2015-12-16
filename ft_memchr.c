@@ -6,7 +6,7 @@
 /*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 23:09:36 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/01 23:16:08 by apellicc         ###   ########.fr       */
+/*   Updated: 2015/12/16 13:35:33 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,14 @@ void				*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	str = (unsigned char *)s;
-	if (s != NULL)
+	while (i < n)
 	{
-		while (i < n)
+		if (str[i] == (unsigned char)c)
 		{
-			if (str[i] == (unsigned char)c)
-			{
-				s2 = str + i;
-				return (s2);
-			}
-			i++;
+			s2 = str + i;
+			return (s2);
 		}
+		i++;
 	}
 	return (NULL);
 }

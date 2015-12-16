@@ -6,7 +6,7 @@
 /*   By: apellicc <apellicc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 16:30:48 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/02 16:31:10 by apellicc         ###   ########.fr       */
+/*   Updated: 2015/12/16 13:17:37 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	s2 = (char *)malloc(sizeof(char *) * (len + 1));
+	s2 = (char *)malloc(sizeof(char) * len + 1);
 	if (!s2)
 		return (NULL);
 	while (s[start] != '\0' && len)
