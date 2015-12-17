@@ -6,32 +6,11 @@
 /*   By: apellicc <apellicc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 16:06:31 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/16 15:59:28 by apellicc         ###   ########.fr       */
+/*   Updated: 2015/12/17 17:03:34 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int		ft_itoa_size(int n)
-{
-	int		size;
-
-	size = 0;
-	if (n == -2147483648)
-		return (11);
-	if (n < 0)
-	{
-		n = -n;
-		size++;
-	}
-	while (n > 9)
-	{
-		n = n / 10;
-		size++;
-	}
-	size++;
-	return (size);
-}
 
 char			*ft_itoa(int n)
 {
@@ -40,7 +19,7 @@ char			*ft_itoa(int n)
 	int		neg;
 
 	neg = 1;
-	size = ft_itoa_size(n);
+	size = ft_intlen(n);
 	str = malloc(sizeof(str) * size + 1);
 	if (str == NULL)
 		return (NULL);
