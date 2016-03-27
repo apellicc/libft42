@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbword.c                                        :+:      :+:    :+:   */
+/*   ft_tabfree.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apellicc <apellicc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: apellicc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 16:13:11 by apellicc          #+#    #+#             */
-/*   Updated: 2016/03/27 12:28:11 by apellicc         ###   ########.fr       */
+/*   Created: 2016/03/27 12:28:25 by apellicc          #+#    #+#             */
+/*   Updated: 2016/03/27 12:30:27 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_nbword(char const *s, char c)
+void	ft_tabfree(char **str)
 {
-	int	i;
-	int	a;
+	int i;
 
-	a = 0;
-	i = 0;
-	if (s[0] != c)
-		i = 1;
-	while (s[a] != '\0')
-	{
-		if (s[a] == c && s[a + 1] != c && s[a + 1] != '\0' && s[a] != '\0')
-		{
-			a++;
-			i++;
-		}
-		a++;
-	}
-	return (i);
+	i = -1;
+	while (str[++i] != NULL)
+		free(str[i]);
+	free(str);
 }

@@ -6,16 +6,21 @@
 /*   By: apellicc <apellicc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 16:36:33 by apellicc          #+#    #+#             */
-/*   Updated: 2015/12/17 17:03:52 by apellicc         ###   ########.fr       */
+/*   Updated: 2016/03/27 12:37:51 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# define BUFF_SIZE 64
+
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <sys/stat.h>
 
 typedef struct		s_list
 {
@@ -94,4 +99,8 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_sqrt(int nb);
 void				ft_puttab(char **str);
+int					ft_tablen(char **str);
+void				ft_tabfree(char **str);
+int					get_next_line(int fd, char **line);
+
 #endif

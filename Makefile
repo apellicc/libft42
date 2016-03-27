@@ -6,7 +6,7 @@
 #    By: apellicc <apellicc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/02 15:54:27 by apellicc          #+#    #+#              #
-#    Updated: 2015/12/16 16:26:13 by apellicc         ###   ########.fr        #
+#    Updated: 2016/03/27 12:35:35 by apellicc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ ft_strsplit.c ft_itoa.c ft_memccpy.c ft_memmove.c ft_atoi.c ft_memcpy.c\
 ft_memcmp.c ft_strsplit.c ft_strtrim_c.c ft_intlen.c ft_searchc.c\
 ft_searchrc.c ft_searchrwhitespace.c ft_searchwhitespace.c ft_intcpy.c\
 ft_lenword.c ft_nbword.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c\
-ft_lstiter.c ft_lstmap.c ft_sqrt.c ft_puttab.c
+ft_lstiter.c ft_lstmap.c ft_sqrt.c ft_puttab.c ft_tablen.c ft_tabfree.c\
+get_next_line.c
 OBJ = $(SRC:.c=.o)
 
 FLAG = -Wall -Werror -Wextra
