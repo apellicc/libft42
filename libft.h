@@ -6,7 +6,7 @@
 /*   By: apellicc <apellicc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 16:36:33 by apellicc          #+#    #+#             */
-/*   Updated: 2016/03/27 12:37:51 by apellicc         ###   ########.fr       */
+/*   Updated: 2016/03/29 15:35:37 by apellicc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,6 @@ void				ft_puttab(char **str);
 int					ft_tablen(char **str);
 void				ft_tabfree(char **str);
 int					get_next_line(int fd, char **line);
+void				*ft_memnew(size_t size);
 
 #endif
